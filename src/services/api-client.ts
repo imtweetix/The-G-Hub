@@ -1,7 +1,4 @@
-import * as dotenv from 'dotenv';
 import axios from 'axios';
-
-dotenv.config();
 
 export default axios.create({
   baseURL: 'https://api.rawg.io/api',
