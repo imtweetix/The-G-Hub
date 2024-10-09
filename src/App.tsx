@@ -1,3 +1,5 @@
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Box, Flex, Grid, GridItem, Show } from '@chakra-ui/react';
 import NavBar from './components/NavBar';
 import GameGrid from './components/GameGrid';
@@ -8,7 +10,6 @@ import PlatformSelector from './components/PlatformSelector';
 import { Platform } from './hooks/usePlatforms';
 import SortSelector from './components/SortSelector';
 import GameHeading from './components/GameHeading';
-import { Analytics } from '@vercel/analytics/react';
 
 export interface GameQuery {
   genre: Genre | null;
@@ -77,6 +78,7 @@ const App = () => {
         </GridItem>
       </Grid>
       <Analytics />
+      <SpeedInsights />
     </>
   );
 };
