@@ -37,7 +37,12 @@ const App = () => {
       </GridItem>
 
       <Show above="lg">
-        <GridItem area="aside" paddingX={3}>
+        <GridItem
+          area="aside"
+          paddingStart={5}
+          paddingEnd={3}
+          paddingTop="40px"
+        >
           <GenreList
             onSelectGenre={(genre) => setGameQuery({ ...gameQuery, genre })}
             selectedGenre={gameQuery.genre}
